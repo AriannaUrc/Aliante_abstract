@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Aliante_interface
 {
-    public class Fusoliera : IComponente
+    public class Fusoliera : Componente
     {
         private double _costo;
         private double _lunghezza;
@@ -65,26 +65,26 @@ namespace Aliante_interface
             costo = cost;
         }
 
-        public string Descrizione()
+        public override string Descrizione()
         {
             return "\nFusoliera\n-lunghezza: " + lunghezza + "\n-materiale: "+ materiale + "\n-costo: " + costo;
         }
 
-        public void Add(IComponente comp)
+        public override void Add(Componente comp)
         {
             throw new System.NotImplementedException();
         }
-        public void Remove(int pos)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public IComponente getChild(int pos)
+        public override void Remove(int pos)
         {
             throw new System.NotImplementedException();
         }
 
-        public double Costo()
+        public override Componente getChild(int pos)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override double Costo()
         {
             return costo;
         }

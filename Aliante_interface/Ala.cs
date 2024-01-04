@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Aliante_interface
 {
-    public class Ala : IComponente
+    public class Ala : Componente
     {
         private double _costo;
         private double _lunghezza;
@@ -58,7 +58,7 @@ namespace Aliante_interface
             }
         }
 
-        public string Descrizione()
+        public override string Descrizione()
         {
             return "\nAla\n-lunghezza: " + lunghezza + "\n-apertura: " + apertura;
         }
@@ -76,21 +76,21 @@ namespace Aliante_interface
             apertura = aper;
             costo = cost;
         }
-        public void Add(IComponente comp)
+        public override void Add(Componente comp)
         {
             throw new System.NotImplementedException();
         }
-        public void Remove(int pos)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public IComponente getChild(int pos)
+        public override void Remove(int pos)
         {
             throw new System.NotImplementedException();
         }
 
-        public double Costo()
+        public override Componente getChild(int pos)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override double Costo()
         {
             return costo;
         }

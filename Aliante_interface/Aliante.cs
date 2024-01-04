@@ -5,17 +5,17 @@ using System.Text;
 
 namespace Aliante_interface
 {
-    public class Aliante : IComponente
+    public class Aliante : Componente
     {
         int dim = 0;
-        public IComponente[] componenti;
+        public Componente[] componenti;
 
         public Aliante()
         {
-             componenti = new IComponente[100];
+             componenti = new Componente[100];
         }
 
-        public string Descrizione()
+        public override string Descrizione()
         {
             string temp = "\n";
             for (int i = 0; i < dim; i++)
@@ -26,7 +26,7 @@ namespace Aliante_interface
             return temp;
         }
 
-        public double Costo()
+        public override double Costo()
         {
             double temp = 0;
             for (int i = 0; i < dim; i++) 
@@ -37,12 +37,12 @@ namespace Aliante_interface
             return temp;
         }
 
-        public void Add(IComponente comp)
+        public override void Add(Componente comp)
         {
             componenti[dim] = comp;
             dim++;
         }
-        public void Remove(int pos)
+        public override void Remove(int pos)
         {
             for (int i = pos+1; i < dim; i++) 
             {
@@ -51,7 +51,7 @@ namespace Aliante_interface
             dim--;
         }
 
-        public IComponente getChild(int pos)
+        public override Componente getChild(int pos)
         {
             return componenti[pos];
         }
