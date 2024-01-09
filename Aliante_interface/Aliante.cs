@@ -39,15 +39,16 @@ namespace Aliante_interface
 
         public override void Add(Componente comp)
         {
-            componenti[dim] = comp;
+            componenti.Add(comp);
             dim++;
         }
         public override void Remove(int pos)
         {
-            for (int i = pos+1; i < dim; i++) 
+            for (int i = pos + 1; i < dim; i++)
             {
-                componenti[i-1] = componenti[i];
+                componenti[i - 1] = componenti[i];
             }
+            componenti.RemoveAt(dim - 1);
             dim--;
         }
 
