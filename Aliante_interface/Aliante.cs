@@ -8,11 +8,11 @@ namespace Aliante_interface
     public class Aliante : Componente
     {
         int dim = 0;
-        public Componente[] componenti;
+        public List<Componente> componenti;
 
         public Aliante()
         {
-             componenti = new Componente[100];
+            componenti = new List<Componente>(100);
         }
 
         public override string Descrizione()
