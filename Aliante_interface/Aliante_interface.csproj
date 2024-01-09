@@ -45,9 +45,11 @@
   <ItemGroup>
     <Compile Include="Ala.cs" />
     <Compile Include="Aliante.cs" />
+    <Compile Include="Cerchione.cs" />
     <Compile Include="Coda.cs" />
     <Compile Include="Fusoliera.cs" />
     <Compile Include="Componente.cs" />
+    <Compile Include="Gomma.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ruota.cs" />

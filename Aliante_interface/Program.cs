@@ -57,22 +57,32 @@ namespace Aliante_interface
 
 
             //Aggiungi informazioni Ruota
-            Console.WriteLine("\n\nInserisci informazioni Fusoliera: \n");
+            Console.WriteLine("\n\nInserisci informazioni Ruota: \n");
 
-            Console.Write("Costo: ");
+            Console.Write("Costo Cerchione: ");
             costo = double.Parse(Console.ReadLine());
+            Console.Write("Pollici materiale: ");
+            int pollici_materiale = int.Parse(Console.ReadLine());
+
+            Console.Write("Costo Gomma: ");
+            double costoG = double.Parse(Console.ReadLine());
             Console.Write("Lunghezza: ");
             lunghezza = double.Parse(Console.ReadLine());
-            Console.Write("pollici_materiale: ");
-            int pollici_materiale = int.Parse(Console.ReadLine());
             Console.Write("Altezza: ");
             double altezza = double.Parse(Console.ReadLine());
             Console.Write("Raggio: ");
             double raggio = double.Parse(Console.ReadLine());
+            Cerchione cerchione = new Cerchione(pollici_materiale, costo);
+            Gomma gomma = new Gomma(lunghezza, altezza, raggio, costoG);
 
 
-            Ruota ruota = new Ruota(lunghezza, altezza, pollici_materiale, raggio, costo);
+            Ruota ruota = new Ruota();
+            ruota.Add(cerchione);
+            ruota.Add(gomma);
 
+            aliante.Add(ruota);
+            aliante.Add(ruota);
+            aliante.Add(ruota);
             aliante.Add(ruota);
 
 
